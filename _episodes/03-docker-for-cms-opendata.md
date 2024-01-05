@@ -100,14 +100,14 @@ Then, download [the python container](https://gitlab.cern.ch/cms-cloud/python-vn
 If you are on native Linux and want to use X11-forwarding, use
 
 ~~~
-docker run -it --name my_python -P -p 8888:8888 --net=host --env="DISPLAY" -v $HOME/.Xauthority:/home/cmsusr/.Xauthority:rw -v ${HOME}/cms_open_data_python:/code gitlab-registry.cern.ch/cms-cloud/python-vnc:latest
+docker run -it --name my_python -P -p 8888:8888 --net=host --env="DISPLAY" -v $HOME/.Xauthority:/home/cmsusr/.Xauthority:rw -v ${HOME}/cms_open_data_python:/code gitlab-registry.cern.ch/cms-cloud/python-vnc:python3.10.5
 ~~~
 {: .language-bash}
 
 On MacOS and Windows WSL2 (and on native Linux if you do not want to use X11-forwarding), use
 
 ~~~
-docker run -it --name my_python -P -p 5901:5901 -p 6080:6080 -p 8888:8888 -v ${HOME}/cms_open_data_python:/code gitlab-registry.cern.ch/cms-cloud/python-vnc:latest
+docker run -it --name my_python -P -p 5901:5901 -p 6080:6080 -p 8888:8888 -v ${HOME}/cms_open_data_python:/code gitlab-registry.cern.ch/cms-cloud/python-vnc:python3.10.5
 ~~~
 {: .language-bash}
 
